@@ -152,12 +152,6 @@ function main()
 
     while true do
       wait(0)
-        if activiti then
-            if wasKeyPressed(key.VK_X) then -- активация по нажатию клавиши X
-                main_window_state.v = not main_window_state.v -- переключаем статус активности окна, не забываем про .v
-                imgui.Process = main_window_state.v
-            end
-        end 
 
         if update_state then
             downloadUrlToFile(script_url, script_path, function(id,status )

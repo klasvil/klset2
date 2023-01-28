@@ -163,7 +163,7 @@ function main()
             downloadUrlToFile(script_url, script_path, function(id,status )
                 if status == dlstatus.STATUSEX_ENDDOWNLOAD then
                     sampAddChatMessage(u8:decode("Скрипт успешно обнавлен!"), -1)
-                    ThisScript():reload()
+                   
                 end
             end)
         end

@@ -101,10 +101,10 @@ local sec = imgui.ImBool(true)
 local script_vers = 1
 local script_vers_text = "0.01"
 
-local update_url = ""
+local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"
 
-local script_url = ""
+local script_url = "https://raw.githubusercontent.com/klasvil/klset2/main/kl2.lua"
 local script_path = thisScript().path
 
 

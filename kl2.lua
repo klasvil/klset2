@@ -98,8 +98,8 @@ local notification_window_state = imgui.ImBool(false)
 local azs_window_state = imgui.ImBool(false)
 local sec = imgui.ImBool(true)
 --- обновлние 
-local script_vers = 4
-local script_vers_text = "0.04"
+local script_vers = 5
+local script_vers_text = "0.05"
 
 local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"
@@ -137,7 +137,6 @@ function main()
         sampAddChatMessage(u8:decode('Для поиска нарушителей аксесуаров пропишите команду /skillsall '), -1)
         sampAddChatMessage(u8:decode('Для активации меню /allmenu '), -1)
     end)
-        sampRegisterChatCommand("skillsall", skillsall) 
         sampRegisterChatCommand("allmenu", allmenu) 
         sampRegisterChatCommand("azs", azs) 
         sampRegisterChatCommand("shop", shop) 
@@ -756,11 +755,6 @@ function meal(agr)
     for _, v  in pairs(meals) do
         print(v)
     end 
-end
-
-function skillsall()
-    skills1()
-    skills2()
 end
 
 function skill1()

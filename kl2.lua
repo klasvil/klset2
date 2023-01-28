@@ -98,8 +98,8 @@ local notification_window_state = imgui.ImBool(false)
 local azs_window_state = imgui.ImBool(false)
 local sec = imgui.ImBool(true)
 --- обновлние 
-local script_vers = 5
-local script_vers_text = "0.05"
+local script_vers = 6
+local script_vers_text = "0.06"
 
 local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"
@@ -771,22 +771,24 @@ function skill1()
             if index ~= 30 then
                 if result and id ~= sampGetPlayerIdByCharHandle(PLAYER_PED) then
                     plairid[index] = id
+                    print(plairid[index])
                     index = index + 1
+                    
                 end
             end
         end
 
         for _, v  in pairs(plairid) do
             sampSendChat('/checkskills '..v..' 3')
-            wait(50)
+            wait(60)
         end
-        wait(200)
+        wait(2500)
 
         index = 1
         id = 1 
         print('--------'..#globalwarn..'----------')
         print('--------'..#plairid..'----------')
-        for i = 1, #globalwarn do
+        for i = 1, #plairid do
             if globalwarn[i] ~= nil then
                 akesurss = globalwarn[i] 
             end
@@ -808,7 +810,7 @@ function skill1()
             end
             id = id + 1 
         end
-    
+       -- print('--------'..#globalwarn..'---------2')
     end)
 end
 
@@ -834,14 +836,14 @@ function skill2()
         end
         for _, v  in pairs(plairid) do
             sampSendChat('/checkskills '..v..' 2')
-            wait(50)
+            wait(40)
         end
-        wait(200)
+        wait(2500)
         print('----записей----'..#globalwarn..'----------')
         print('----игроков----'..#plairid..'----------')
         id = 1
         index = 1
-        for i = 1, #globalwarn do
+        for i = 1, #plairid do
 
             if globalwarn[i] ~= nil then
                 bodykitss = globalwarn[i] 

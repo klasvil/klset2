@@ -98,8 +98,8 @@ local notification_window_state = imgui.ImBool(false)
 local azs_window_state = imgui.ImBool(false)
 local sec = imgui.ImBool(true)
 --- обновлние 
-local script_vers = 1
-local script_vers_text = "0.01"
+local script_vers = 3
+local script_vers_text = "0.03"
 
 local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"

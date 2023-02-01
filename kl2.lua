@@ -82,7 +82,7 @@ shoplimit =
     {name = 'Бронижилет',min = 10000,max = 20000},
     {name = 'Яд',min =	1,max =	50000},
     {name = 'Аптечка',min = 1,max = 4500},
-    {name = 'Табл. от нарко',min = 1,max = 33000},
+    {name = 'Табл. от нарко',min = 100000,max = 300000},
     {name = 'Цветы',min = 1,max = 10000},
     {name = 'Ключ для ларца',min = 10000,max = 75000}
 }
@@ -98,8 +98,8 @@ local notification_window_state = imgui.ImBool(false)
 local azs_window_state = imgui.ImBool(false)
 local sec = imgui.ImBool(true)
 --- обновлние 
-local script_vers = 6
-local script_vers_text = "0.06"
+local script_vers = 7
+local script_vers_text = "0.07"
 
 local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"

@@ -73,7 +73,7 @@ shoplimit =
     {name = 'Тел. книга',min = 1,max = 8000},
     {name = 'Скрепки',min = 1,max =	12000},
     {name = 'Маска',min = 1,max = 8000},
-    {name = 'Радио',min = 1,max = 8000},
+   -- {name = 'Радио',min = 1,max = 8000},
     {name = 'Фотоаппарат',min =	1,max =	15000},
     {name = 'Телефон',min =	1,max =	4500},
     {name = 'Симкарта',min = 1,max = 4500},
@@ -84,6 +84,7 @@ shoplimit =
     {name = 'Аптечка',min = 1,max = 4500},
     {name = 'Табл. от нарко',min = 100000,max = 300000},
     {name = 'Цветы',min = 1,max = 10000},
+    {name = 'Водичка',min = 1,max = 8000000},
     {name = 'Ключ для ларца',min = 10000,max = 75000}
 }
 
@@ -98,8 +99,8 @@ local notification_window_state = imgui.ImBool(false)
 local azs_window_state = imgui.ImBool(false)
 local sec = imgui.ImBool(true)
 --- обновлние 
-local script_vers = 7
-local script_vers_text = "0.07"
+local script_vers = 8
+local script_vers_text = "0.08"
 
 local update_url = "https://raw.githubusercontent.com/klasvil/klset2/main/update.ini"
 local update_path = getWorkingDirectory() .."/update.ini"
@@ -666,11 +667,11 @@ local x, y = math.floor(data.position.x), math.floor(data.position.y)
        overlimin2 = overlimin2 + 1 
         
     end
-   --  if x == 262 and y == 279 then--262   188
-   --     -- sampAddChatMessage(u8:decode('Канистра-'..data.text), -1)
-   --     shops[overlimin2] = data.text
-   --    overlimin2 = overlimin2 + 1 
-   --  end
+     if x == 262 and y == 279 then--262   188
+        -- sampAddChatMessage(u8:decode('Канистра-'..data.text), -1)
+     shops[overlimin2] = data.text
+      overlimin2 = overlimin2 + 1 
+     end
     if x == 288 and y == 279 then--288   188
        -- sampAddChatMessage(u8:decode('Балончик-'..data.text), -1)
        shops[overlimin2] = data.text
